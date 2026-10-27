@@ -127,7 +127,7 @@
       "Yellow": {
         "50": {
           "$type": "color",
-          "$value": "#f3fcf9",
+          "$value": "#fffceb",
           "$extensions": {
             "com.figma": {
               "codeSyntax": {
@@ -1027,13 +1027,13 @@
         }
       },
       "Family": {
-        "Inter": {
+        "Roboto": {
           "$type": "fontFamily",
           "$value": "Roboto",
           "$extensions": {
             "com.figma": {
               "codeSyntax": {
-                "WEB": "var(--font-family-inter)"
+                "WEB": "var(--font-family-roboto)"
               },
               "scopes": []
             }
@@ -4580,7 +4580,7 @@
       "Family": {
         "Body": {
           "$type": "fontFamily",
-          "$value": "{Primitive.Font.Family.Inter}",
+          "$value": "{Primitive.Font.Family.Roboto}",
           "$extensions": {
             "com.figma": {
               "codeSyntax": {
@@ -4594,7 +4594,7 @@
         },
         "Label": {
           "$type": "fontFamily",
-          "$value": "{Primitive.Font.Family.Inter}",
+          "$value": "{Primitive.Font.Family.Roboto}",
           "$extensions": {
             "com.figma": {
               "codeSyntax": {
@@ -4608,7 +4608,7 @@
         },
         "Title": {
           "$type": "fontFamily",
-          "$value": "{Primitive.Font.Family.Inter}",
+          "$value": "{Primitive.Font.Family.Roboto}",
           "$extensions": {
             "com.figma": {
               "codeSyntax": {
@@ -4622,7 +4622,7 @@
         },
         "Display": {
           "$type": "fontFamily",
-          "$value": "{Primitive.Font.Family.Inter}",
+          "$value": "{Primitive.Font.Family.Roboto}",
           "$extensions": {
             "com.figma": {
               "codeSyntax": {

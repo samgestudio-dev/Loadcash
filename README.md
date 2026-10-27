@@ -81,13 +81,6 @@ Figma 文件里有 42 个变量的 code syntax 与规范不一致（Yellow 色�
 | Drop shadow radius | `box-shadow` blur |
 | Background blur | `backdrop-filter: blur()` |
 
-## 值层面需要确认的地方
-
-导出时原样保留，没有改动：
-
-- `Primitive/Font/Family/Inter` 的值是 **Roboto**，所有 text style 实际也用 Roboto。
-- `Primitive/Color/Yellow/50` 是 `#f3fcf9`（偏绿），与 Yellow 色阶其余档位色相不一致。
-
 ## 更新流程
 
 1. 在 Figma 修改变量 / 样式

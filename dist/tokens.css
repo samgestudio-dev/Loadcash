@@ -18,7 +18,7 @@
   --color-blue-700: #004a72;
   --color-blue-800: #003757;
   --color-blue-900: #00243d;
-  --color-yellow-50: #f3fcf9;
+  --color-yellow-50: #fffceb;
   --color-yellow-100: #fff9d6;
   --color-yellow-200: #fff1a3;
   --color-yellow-300: #ffe348;
@@ -89,7 +89,7 @@
 
   /* Font */
   --font-weight-400: 400;
-  --font-family-inter: "Roboto";
+  --font-family-roboto: "Roboto";
   --font-weight-500: 500;
   --font-weight-600: 600;
   --font-line-height-14: 14px;
@@ -328,10 +328,10 @@
   --font-size-display-md: var(--font-size-36); /* 重点金额、授信额度 */
   --font-size-display-lg: var(--font-size-40); /* Hero 数字、强营销数字 */
   --font-size-display-xl: var(--font-size-48); /* 活动页超大标题 / 主视觉数字 */
-  --font-family-body: var(--font-family-inter);
-  --font-family-label: var(--font-family-inter);
-  --font-family-title: var(--font-family-inter);
-  --font-family-display: var(--font-family-inter);
+  --font-family-body: var(--font-family-roboto);
+  --font-family-label: var(--font-family-roboto);
+  --font-family-title: var(--font-family-roboto);
+  --font-family-display: var(--font-family-roboto);
   --font-weight-regular: var(--font-weight-400);
   --font-weight-medium: var(--font-weight-500);
   --font-weight-semi-bold: var(--font-weight-600);
