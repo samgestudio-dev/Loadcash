@@ -1,0 +1,18 @@
+{
+ "version": "2026.10.27",
+ "exportedAt": "2026-10-27 18:21 (UTC+8)",
+ "exportedBy": "Claude (Figma MCP)",
+ "via": "mcp",
+ "figmaFile": "LoadCash Design System",
+ "url": "https://www.figma.com/design/J5Ho0HeSsONaT4wWdEmjLO",
+ "counts": {
+  "Primitive": 151,
+  "Semantic": 253,
+  "styles": 33
+ },
+ "styles": {
+  "text": 24,
+  "effect": 8,
+  "paint": 1
+ }
+}

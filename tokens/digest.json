@@ -1,0 +1,43 @@
+{
+ "version": "2026.10.27",
+ "labels": {
+  "collections": "Collections",
+  "s:text": "Text styles",
+  "s:effect": "Effect styles",
+  "s:paint": "Paint styles",
+  "v:VariableCollectionId:1450:11892": "Primitive variables",
+  "v:VariableCollectionId:1020:5688": "Semantic variables"
+ },
+ "digest": {
+  "collections": {
+   "n": 2,
+   "h": "6c13dc2a",
+   "b": ",,,,,,,,,,,,,,,,,d4c35a,,,,,69a9d4,,,,,,,,,"
+  },
+  "v:VariableCollectionId:1450:11892": {
+   "n": 151,
+   "h": "6b7acb60",
+   "b": "7ca773,29459a,200996,2aaa13,b12932,e7f0b0,b09482,793480,b25a96,0e3d39,753f77,2a1e8c,762888,3ba2e5,bf5a5a,f7ac01,c074ff,b7c524,67461c,f94558,57385e,b2dc5a,65d76e,1f22f8,61c3b2,307014,918480,591001,ff7ffb,c82042,c85dae,56f567"
+  },
+  "v:VariableCollectionId:1020:5688": {
+   "n": 253,
+   "h": "2480c216",
+   "b": "00ebc3,622cc6,7fe711,94a82e,e2e975,899924,56b4ca,519fd9,ad4baa,f33a1d,0bd79f,70afb3,39d0d1,734805,3028ed,f624f9,4feed9,4646b8,56a2a7,dbe219,a45c78,7ec969,c974c1,9c0c5a,d1b21f,9e2b43,36a13b,7c98c5,63b938,5563af,7d8959,277835"
+  },
+  "s:text": {
+   "n": 24,
+   "h": "7dea0c91",
+   "b": "d79a7d,be98c8,,,b3922c,16427c,4b0eea,,,,,11fc64,a20916,,00cb30,c71b46,,,91545e,,ba7955,b8c333,,,,3c036f,,8f0637,,f65e5e,,"
+  },
+  "s:effect": {
+   "n": 8,
+   "h": "dfaf8ed1",
+   "b": ",,,,a8e7ef,,f8f40b,,,84d20a,,,,,ef1725,,,,,32411c,,,,7dcbd7,718a9c,aa3853,,,,,,"
+  },
+  "s:paint": {
+   "n": 1,
+   "h": "818d829c",
+   "b": ",,,,,,,,,,,,,,,,,,,,,,,,,13613c,,,,,,"
+  }
+ }
+}
