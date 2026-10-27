@@ -1,7 +1,8 @@
 # LoadCash tokens — agent guide
 
 Versioned design tokens of the LoadCash Design System (Figma file `J5Ho0HeSsONaT4wWdEmjLO`).
-There is no Playground UI in this repo. The owner is a designer; reply in plain language.
+There is no Playground UI in this repo; GitHub Pages serves `main` / root as-is (`.nojekyll`), so the latest tokens
+are at https://samgestudio-dev.github.io/Loadcash/tokens/tokens.css. The owner is a designer; reply in plain language.
 
 ## Layout
 

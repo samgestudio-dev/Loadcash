@@ -58,7 +58,7 @@ Use semantic tokens (`--color-text-*`, `--color-surface-*`, `--spacing-gap-*`, `
 | Want | URL |
 | --- | --- |
 | A fixed version (recommended for the app) | `https://cdn.jsdelivr.net/gh/samgestudio-dev/Loadcash@tokens-v2026.10.27/tokens/tokens.css` |
-| The latest on `main` (CDN may cache for a few hours) | `https://cdn.jsdelivr.net/gh/samgestudio-dev/Loadcash@main/tokens/tokens.css` |
+| Always the latest | `https://samgestudio-dev.github.io/Loadcash/tokens/tokens.css` |
 
 Swap `tokens.css` for `tokens.json` to get the W3C format (for Style Dictionary, Tokens Studio, etc.). To upgrade,
 read the *Developer impact* of each version in between in `CHANGELOG.md`, then change the tag.
