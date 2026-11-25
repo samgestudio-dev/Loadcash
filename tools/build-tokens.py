@@ -15,7 +15,9 @@ from tokenlib import sort_snapshot, to_code_syntax  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOK = os.path.join(ROOT, 'tokens')
-KNOWN_ORDER = ['Primitive', 'Semantic', 'Component']
+# primitives before what aliases them; the old collections were renamed legacy-* when lc-* arrived (2026-11-25)
+KNOWN_ORDER = ['lc-primitives', 'lc-color', 'lc-layout', 'lc-typography',
+               'legacy-primitive', 'legacy-semantic', 'Primitive', 'Semantic', 'Component']
 FONT_STACK = {  # generic fallbacks; any family not listed gets '"<family>", sans-serif'
     'Roboto': '"Roboto", sans-serif',
 }
@@ -43,16 +45,20 @@ def num(x):
 
 def kind(name, vtype):
     """What a variable means, from its type and path."""
-    top = name.split('/')
+    # case-insensitive, and the lc/ (or legacy/) prefix is skipped: lc/font/weight/700 is a weight like Font/Weight/700
+    top = [p.lower() for p in name.split('/')]
+    if top[0] in ('lc', 'legacy') and len(top) > 1:
+        top = top[1:]
+    sub = top[1] if len(top) > 1 else ''
     if vtype == 'COLOR':
         return 'color'
     if vtype == 'STRING':
-        return 'fontFamily' if top[0] == 'Font' else 'string'
+        return 'fontFamily' if top[0] == 'font' or (top[0] == 'typography' and sub == 'font-family') else 'string'
     if vtype == 'BOOLEAN':
         return 'boolean'
-    if top[0] == 'Font' and len(top) > 1 and top[1] == 'Weight':
+    if (top[0] == 'font' and sub == 'weight') or (top[0] == 'typography' and sub == 'font-weight'):
         return 'fontWeight'
-    if top[0].lower() == 'layer opacity':
+    if top[0] == 'layer opacity':
         return 'opacity'
     return 'dimension'  # spacing, radius, blur, stroke width, font size, line height (px)
 
@@ -98,7 +104,7 @@ def build(snap, version):
 
     def ref(vname):
         """A style's bound variable -> ({json ref}, var(--css))."""
-        for c in ['Semantic'] + order:
+        for c in ['legacy-semantic', 'Semantic'] + order:
             if (c, vname) in by_name:
                 return '{%s.%s}' % (c.lower(), vname.replace('/', '.')), 'var(%s)' % css_name[(c, vname)]
         raise SystemExit('Style uses a variable that is not in the snapshot: %s' % vname)

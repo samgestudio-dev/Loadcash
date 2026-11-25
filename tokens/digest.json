@@ -1,18 +1,22 @@
 {
- "version": "2026.10.27",
+ "version": "2026.11.25",
  "labels": {
   "collections": "Collections",
   "s:text": "Text styles",
   "s:effect": "Effect styles",
   "s:paint": "Paint styles",
-  "v:VariableCollectionId:1450:11892": "Primitive variables",
-  "v:VariableCollectionId:1020:5688": "Semantic variables"
+  "v:VariableCollectionId:1450:11892": "legacy-primitive variables",
+  "v:VariableCollectionId:1020:5688": "legacy-semantic variables",
+  "v:VariableCollectionId:8434:39": "lc-primitives variables",
+  "v:VariableCollectionId:8434:178": "lc-color variables",
+  "v:VariableCollectionId:8434:243": "lc-layout variables",
+  "v:VariableCollectionId:8434:286": "lc-typography variables"
  },
  "digest": {
   "collections": {
-   "n": 2,
-   "h": "6c13dc2a",
-   "b": ",,,,,,,,,,,,,,,,,d4c35a,,,,,69a9d4,,,,,,,,,"
+   "n": 6,
+   "h": "a768fc47",
+   "b": ",,,,,,,,,,,,925008,d31b57,,,,03d1ce,,,,,405fdd,7a4779,,,,,,,,3131f0"
   },
   "v:VariableCollectionId:1450:11892": {
    "n": 151,
@@ -21,23 +25,43 @@
   },
   "v:VariableCollectionId:1020:5688": {
    "n": 253,
-   "h": "2480c216",
-   "b": "00ebc3,622cc6,7fe711,94a82e,e2e975,899924,56b4ca,519fd9,ad4baa,f33a1d,0bd79f,70afb3,39d0d1,734805,3028ed,f624f9,4feed9,4646b8,56a2a7,dbe219,a45c78,7ec969,c974c1,9c0c5a,d1b21f,9e2b43,36a13b,7c98c5,63b938,5563af,7d8959,277835"
+   "h": "d73ce2f2",
+   "b": "80d7f3,7ff65d,01bc36,12a1c5,9d0acf,5f1265,7bbeb0,b8a22f,52f8a1,10b906,4f13da,fc359a,20bb15,576fbf,aabf70,18a7fb,432a60,9ca6b1,ee50d5,8ce917,8f9b29,3001f1,6f40ed,091462,049f4e,a0340d,252ab4,31f78b,120f78,60a94e,a24d96,e74442"
+  },
+  "v:VariableCollectionId:8434:39": {
+   "n": 136,
+   "h": "883d51f8",
+   "b": "2e5055,abd355,c59349,d530ef,323857,5fdfd5,f7a690,0f9450,952fbd,169b96,c29ec5,db9e2e,f4976b,422c78,a6924c,b82e6e,287a83,4eb0b3,d032eb,d6bc60,0ba75b,45fd5c,b115ed,8d492f,7b816e,6fc227,bdc4ad,78e988,494d12,d02a8d,34e00c,385ffc"
+  },
+  "v:VariableCollectionId:8434:178": {
+   "n": 68,
+   "h": "c4333c95",
+   "b": "76f17d,baa34b,583853,f3357d,1bd859,14a6b8,6bd1d5,f6a3e3,1f1dc3,2ef6ca,89d10d,98f35c,837e1d,710d97,f6b6f2,9c8307,f72b92,cdd1da,ee8578,2205de,d83ef1,fa13cd,c62150,673f9a,df7083,0ea29d,5b25ec,9982c4,e4b2f1,2ef9c4,791278,4558b2"
+  },
+  "v:VariableCollectionId:8434:243": {
+   "n": 42,
+   "h": "86c24eb2",
+   "b": "395a50,,,,cd702b,430c88,339212,8ca342,,4e2d00,ae3cdb,8a4bd2,d87409,f1e230,,,,7b9fd4,8a95f0,fa2f98,18e925,,48670e,4476b6,e02cb5,76c211,6d43c3,,,99dbf7,4b39b9,3a7201"
+  },
+  "v:VariableCollectionId:8434:286": {
+   "n": 54,
+   "h": "e4c8e64e",
+   "b": "2494bb,ee4d00,b94ebb,d1f070,1991ee,3957ea,,5e7ec1,112ebc,3f23d9,e6244a,e2ddfe,,5059fe,882268,63e413,6a21c8,c540be,003fb1,9a29af,39cafa,324ca7,137df5,0cd730,1f9492,79a512,f3bf9a,a116b1,3b9ae9,038532,45516e,"
   },
   "s:text": {
    "n": 24,
-   "h": "7dea0c91",
-   "b": "d79a7d,be98c8,,,b3922c,16427c,4b0eea,,,,,11fc64,a20916,,00cb30,c71b46,,,91545e,,ba7955,b8c333,,,,3c036f,,8f0637,,f65e5e,,"
+   "h": "12cd0360",
+   "b": "dfa3b4,325272,,,81174f,ab39fb,c5716f,,,,,fa1849,ee4b69,,89a34c,deafe7,,,253b10,,fc0c2c,e5ce11,,,,e28f4f,,ee8dca,,c3cc12,,"
   },
   "s:effect": {
    "n": 8,
-   "h": "dfaf8ed1",
-   "b": ",,,,a8e7ef,,f8f40b,,,84d20a,,,,,ef1725,,,,,32411c,,,,7dcbd7,718a9c,aa3853,,,,,,"
+   "h": "1468b56b",
+   "b": ",,,,f6fbd2,,4c7954,,,015158,,,,,0c67e0,,,,,9c014d,,,,eab822,c489ce,104a9e,,,,,,"
   },
   "s:paint": {
    "n": 1,
-   "h": "818d829c",
-   "b": ",,,,,,,,,,,,,,,,,,,,,,,,,13613c,,,,,,"
+   "h": "92b09a3b",
+   "b": ",,,,,,,,,,,,,,,,,,,,,,,,,f5ef3c,,,,,,"
   }
  }
 }
