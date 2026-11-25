@@ -1,0 +1,11 @@
+/* On the deep band: divider above, company lines label-sm bold, centred, soft white */
+.lp-footer {
+  margin-top: var(--lc-spacing-gap-xs);
+  padding: var(--lc-spacing-inset-xl) 0 env(safe-area-inset-bottom);
+  border-top: 1px solid var(--lp-on-deep-line);
+  color: var(--lc-color-alpha-white-60);
+  text-align: center;
+  font-size: var(--lc-typography-label-sm-font-size);
+  line-height: var(--lc-typography-label-sm-line-height);
+  font-weight: var(--lc-typography-font-weight-bold);
+}

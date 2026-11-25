@@ -1,8 +1,28 @@
-# LoadCash tokens — agent guide
+# LoadCash — agent guide
 
-Versioned design tokens of the LoadCash Design System (Figma file `J5Ho0HeSsONaT4wWdEmjLO`).
-There is no Playground UI in this repo; GitHub Pages serves `main` / root as-is (`.nojekyll`), so the latest tokens
-are at https://samgestudio-dev.github.io/Loadcash/tokens/tokens.css. The owner is a designer; reply in plain language.
+Versioned design tokens of the LoadCash Design System (Figma file `J5Ho0HeSsONaT4wWdEmjLO`), plus the whitelist
+landing page built on them. GitHub Pages serves `main` / root as-is (`.nojekyll`), so the latest tokens are at
+https://samgestudio-dev.github.io/Loadcash/tokens/tokens.css. The owner is a designer; reply in plain language.
+
+## Design rules: use the lc tokens by default
+
+Every LoadCash project uses the `lc` tokens. Everything else in Figma is **legacy**: the `legacy-primitive` and
+`legacy-semantic` collections and every style under `legacy/` (renamed from `Primitive`, `Semantic` and the
+un-prefixed styles on 2026-11-25). Don't use legacy tokens or styles in new work, and don't hardcode values.
+
+- Figma collections: `lc-primitives`, `lc-color` (light / dark), `lc-layout`, `lc-typography`. Bind to `lc/...` variables.
+- Code: `tokens/tokens.css` — the lc variables are the `--lc-*` ones (`lc/color/text/primary` → `--lc-color-text-primary`).
+  Legacy variables keep their old names (`--color-text-primary`); legacy styles are `--legacy-*` and `.lc-text-legacy-*`.
+- In components, prefer **semantic** lc tokens: `--lc-color-bg-*`, `text-*`, `icon-*`, `border-*`, `action-*`,
+  `feedback-*`, `overlay-*`, `--lc-spacing-inset-*`, `gap-*`, `--lc-spacing-page-gutter`, `--lc-radius-control|card|sheet|pill`,
+  `--lc-typography-*`. Use primitives (`--lc-color-brand-500`, `--lc-spacing-16`) only when no semantic token fits.
+- Sizes (widths, heights) are not tokens. Pure decoration (illustrations, backdrops) doesn't need tokens.
+
+Known gaps (2026-11-25):
+- Figma has no lc text / effect / paint styles yet: `tokens.css` has no lc shadow, gradient or `.lc-text-*` classes
+  built on lc tokens. The landing page keeps its three composites (`--lp-gradient-cta`, `--lp-shadow-*`) in its own CSS.
+- `tokens.css` carries only each collection's default mode, so `lc-color` is light only (dark stays in the snapshot).
+- Shadow colours (`#000128` / `#034566` + alpha) have no lc colour token.
 
 ## Layout
 
@@ -15,7 +35,18 @@ tools/build-tokens.py         snapshot → tokens.css / tokens.json (run by sync
 tools/tokenlib.py             hashing, digest and CSS naming (must match tools/figma-tokens/core.js)
 tools/figma-tokens/           Figma side: core.js (export + digest) and the LoadCash Tokens Export plugin
 .github/workflows/tokens.yml  applies exports dropped in tokens/inbox/, tags tokens-v<version>, checks generated files
+landing/                      whitelist landing page (Vite + React), on the --lc-* tokens of tokens/tokens.css
+tools/landing-server.command  one-click local server for landing/ (port 5174; 5173 is MocaMoca's)
 ```
+
+## Landing page (`landing/`)
+
+- Flow of the MocaMoca whitelist page: hero → loan calculator → About Us → How it works → closing band, sticky CTA.
+  The hero is the Figma new-user home screen (8654:17081); the cards are lc components.
+- Archived in Figma: page "25 nov 2026 - 白名单落地页", Section 1 (8663:17218), built from lc components and
+  variables. When the page changes, change both, and keep them identical.
+- Run it: double-click `tools/landing-server.command`, or `npm --prefix landing run dev -- --port 5174`.
+- Placeholders before launch: `PLAY_URL` in `landing/src/config.ts`, the loan model in `landing/src/loan.ts`.
 
 ## Updating tokens
 

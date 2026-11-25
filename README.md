@@ -10,3 +10,12 @@ versioned from Figma with a changelog and a git tag per update.
 - **Update from Figma:** run the *LoadCash Tokens Export* plugin and upload the file to [`tokens/inbox`](tokens/inbox/),
   or ask Claude to “sync tokens from Figma”. Details: [`tokens/README.md`](tokens/README.md).
 - **Naming:** CSS names follow [`tokens/code-syntax-naming.md`](tokens/code-syntax-naming.md).
+- **lc first:** new work uses the `--lc-*` tokens (Figma collections `lc-primitives`, `lc-color`, `lc-layout`,
+  `lc-typography`). The older collections and styles are kept as `legacy-*` / `legacy/` (since v2026.11.25).
+
+## Landing page
+
+[`landing/`](landing/) is the LoadCash whitelist landing page (Vite + React), built on the `--lc-*` tokens.
+Run it with [`tools/landing-server.command`](tools/landing-server.command) (double-click; port 5174) or
+`npm --prefix landing install && npm --prefix landing run dev`. The Figma archive of the page is in the design
+system file, page “25 nov 2026 - 白名单落地页”.

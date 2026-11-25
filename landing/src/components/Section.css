@@ -1,0 +1,71 @@
+.lp-sec {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-md);
+  padding: var(--lc-spacing-inset-md) var(--lc-spacing-page-gutter);
+  scroll-margin-top: var(--lp-nav-h);
+}
+
+.lp-sec--muted {
+  background: var(--lc-color-bg-brand-muted);
+}
+
+.lp-sec--default {
+  background: var(--lc-color-bg-default);
+}
+
+.lp-sec--deep {
+  padding-top: var(--lc-spacing-inset-2xl);
+  padding-bottom: var(--lc-spacing-inset-2xl);
+  background: var(--lc-color-bg-brand-strong);
+  color: var(--lc-color-text-inverse);
+}
+
+.lp-sec--center {
+  text-align: center;
+}
+
+.lp-sec__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-2xs);
+}
+
+.lp-sec--center .lp-sec__head {
+  align-items: center;
+}
+
+.lp-sec__kicker {
+  font-size: var(--lc-typography-label-sm-font-size);
+  line-height: var(--lc-typography-label-sm-line-height);
+  font-weight: var(--lc-typography-font-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lc-color-text-brand);
+}
+
+/* as the Figma section titles (lc/Loan/About us › Title): title-sm, bold */
+.lp-sec__title {
+  font-size: var(--lc-typography-title-sm-font-size);
+  line-height: var(--lc-typography-title-sm-line-height);
+  font-weight: var(--lc-typography-font-weight-bold);
+  color: var(--lc-color-text-primary);
+  text-wrap: balance;
+}
+
+.lp-sec__body {
+  font-size: var(--lc-typography-body-md-font-size);
+  line-height: var(--lc-typography-body-md-line-height);
+  color: var(--lc-color-text-secondary);
+  text-wrap: pretty;
+}
+
+.lp-sec--deep .lp-sec__title {
+  font-size: var(--lc-typography-title-md-font-size);
+  line-height: var(--lc-typography-title-md-line-height);
+  color: var(--lc-color-text-inverse);
+}
+
+.lp-sec--deep .lp-sec__body {
+  color: var(--lp-on-deep-soft);
+}

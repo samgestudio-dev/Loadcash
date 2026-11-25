@@ -1,0 +1,138 @@
+/* Figma 8654:17081 at 360 wide. Frame fill lc/color/bg/brand-muted; Content padding-top inset md;
+   Cards padding 0 page gutter, gap md. */
+.lp-hero {
+  position: relative;
+  isolation: isolate;
+  background: var(--lc-color-bg-brand-muted);
+}
+
+/* img/Art/home-backdrop-hero (8498:15092): 360 × 440, starts under the header. Decorative. */
+.lp-hero__bg {
+  position: absolute;
+  z-index: -1;
+  top: var(--lp-nav-h);
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 360 / 440;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.lp-hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-md);
+  padding: calc(var(--lp-nav-h) + env(safe-area-inset-top) + var(--lc-spacing-inset-md)) var(--lc-spacing-page-gutter) var(--lc-spacing-inset-xl);
+}
+
+/* ---------- social proof ---------- */
+.lp-proof {
+  --dot: 8px;
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-xs);
+  padding-left: var(--lc-spacing-inset-xs);
+  color: var(--lc-color-text-brand-strong);
+  font-family: var(--lc-typography-font-family-sans);
+  font-size: var(--lc-typography-title-sm-font-size);
+  line-height: var(--lc-typography-title-sm-line-height);
+  font-weight: var(--lc-typography-font-weight-bold);
+  font-style: italic;
+}
+
+.lp-proof li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--lc-spacing-gap-sm);
+}
+
+/* bullet dot (decorative) */
+.lp-proof li::before {
+  content: '';
+  flex: none;
+  width: var(--dot);
+  height: var(--dot);
+  border-radius: var(--lc-radius-full);
+  background: currentColor;
+}
+
+/* dotted line joining the two dots (decorative) */
+.lp-proof::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--lc-spacing-inset-xs) + var(--dot) / 2 - 0.5px);
+  top: calc(var(--lc-typography-title-sm-line-height) / 2 + var(--dot) / 2 + 3px);
+  bottom: calc(var(--lc-typography-title-sm-line-height) / 2 + var(--dot) / 2 + 3px);
+  border-left: 1px dashed currentColor;
+}
+
+/* ---------- loan amount card (lc/Loan/Loan amount card) ---------- */
+.lp-amountcard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-md);
+  padding: var(--lc-spacing-inset-xl);
+}
+
+.lp-amountcard__amount {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-xs);
+}
+
+.lp-amountcard__label {
+  font-size: var(--lc-typography-body-md-font-size);
+  line-height: var(--lc-typography-body-md-line-height);
+  font-weight: var(--lc-typography-font-weight-regular);
+  color: var(--lc-color-text-primary);
+}
+
+.lp-amountcard__value {
+  font-size: var(--lc-typography-display-md-font-size);
+  line-height: var(--lc-typography-line-height-44);
+  font-weight: var(--lc-typography-font-weight-bold);
+  color: var(--lc-color-text-brand);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.lp-amountcard__divider {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--lc-color-border-strong);
+}
+
+/* Terms: padding 0 inset 2xs, gap xs; label body-sm, value label-md bold, all text-brand */
+.lp-amountcard__facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-xs);
+  padding: 0 var(--lc-spacing-inset-2xs);
+  color: var(--lc-color-text-brand);
+}
+
+.lp-amountcard__facts > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--lc-spacing-gap-xs);
+}
+
+.lp-amountcard__facts dt {
+  font-size: var(--lc-typography-body-sm-font-size);
+  line-height: var(--lc-typography-body-sm-line-height);
+  font-weight: var(--lc-typography-font-weight-regular);
+}
+
+.lp-amountcard__facts dd {
+  font-size: var(--lc-typography-label-md-font-size);
+  line-height: var(--lc-typography-label-md-line-height);
+  font-weight: var(--lc-typography-font-weight-bold);
+  white-space: nowrap;
+}

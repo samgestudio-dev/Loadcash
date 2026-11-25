@@ -1,0 +1,33 @@
+/* Figma App bar: 56 high, gap xs, padding-left inset md */
+.lp-topbar {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: var(--lp-max);
+  margin: 0 auto;
+  height: calc(var(--lp-nav-h) + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) var(--lc-spacing-inset-md) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--lc-spacing-gap-xs);
+}
+
+.lp-topbar > *:not(.lp-topbar__fill) {
+  position: relative;
+}
+
+.lp-topbar__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--lc-color-bg-brand-muted);
+  box-shadow: var(--lp-shadow-default);
+  pointer-events: none;
+}
+
+.lp-topbar__brand {
+  display: inline-flex;
+  text-decoration: none;
+}

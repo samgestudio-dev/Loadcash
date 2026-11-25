@@ -1,0 +1,52 @@
+/* Card: bg default, radius card, padding md / sm, gap md */
+.lp-about {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-md);
+  padding: var(--lc-spacing-inset-md) var(--lc-spacing-inset-sm);
+  border-radius: var(--lc-radius-card);
+  background: var(--lc-color-bg-default);
+}
+
+/* lc/Loan/Feature row: brand-subtle, radius card, padding sm / md / sm / xs, gap sm */
+.lp-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--lc-spacing-gap-sm);
+  padding: var(--lc-spacing-inset-sm) var(--lc-spacing-inset-md) var(--lc-spacing-inset-sm) var(--lc-spacing-inset-xs);
+  border-radius: var(--lc-radius-card);
+  background: var(--lc-color-bg-brand-subtle);
+}
+
+.lp-feature img {
+  flex: none;
+}
+
+.lp-feature__divider {
+  flex: none;
+  align-self: stretch;
+  width: 1px;
+  background: var(--lc-color-border-strong);
+}
+
+.lp-feature__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lc-spacing-gap-3xs);
+  min-width: 0;
+}
+
+.lp-feature__text h3 {
+  font-size: var(--lc-typography-body-lg-font-size);
+  line-height: var(--lc-typography-line-height-20);
+  font-weight: var(--lc-typography-font-weight-bold);
+  color: var(--lc-color-text-primary);
+}
+
+.lp-feature__text p {
+  font-size: var(--lc-typography-body-md-font-size);
+  line-height: var(--lc-typography-line-height-18);
+  font-weight: var(--lc-typography-font-weight-regular);
+  color: var(--lc-color-text-secondary);
+}

@@ -1,0 +1,62 @@
+/* lc/Action/Button — Large: 48, inset md/xl, label-lg medium · Medium: 36, inset xs/md, body-md medium. Radius control. */
+.lp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--lc-spacing-gap-xs);
+  border-radius: var(--lc-radius-control);
+  font-family: var(--lc-typography-font-family-sans);
+  font-weight: var(--lc-typography-font-weight-medium);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  will-change: transform;
+}
+
+.lp-btn--lg {
+  height: 48px;
+  padding: var(--lc-spacing-inset-md) var(--lc-spacing-inset-xl);
+  font-size: var(--lc-typography-label-lg-font-size);
+  line-height: var(--lc-typography-label-lg-line-height);
+}
+
+.lp-btn--md {
+  height: 36px;
+  padding: var(--lc-spacing-inset-xs) var(--lc-spacing-inset-md);
+  font-size: var(--lc-typography-body-md-font-size);
+  line-height: var(--lc-typography-body-md-line-height);
+}
+
+.lp-btn--block {
+  display: flex;
+  width: 100%;
+}
+
+.lp-btn--primary {
+  background: var(--lp-gradient-cta);
+  color: var(--lc-color-action-primary-fg);
+}
+
+.lp-btn--primary:active {
+  background: var(--lc-color-action-primary-bg-pressed);
+}
+
+.lp-btn--secondary {
+  background: var(--lc-color-action-secondary-bg);
+  color: var(--lc-color-action-secondary-fg);
+}
+
+.lp-btn--secondary:active {
+  background: var(--lc-color-action-secondary-bg-pressed);
+}
+
+@media (hover: hover) {
+  .lp-btn--primary:hover {
+    background: var(--lc-color-action-primary-bg);
+  }
+  .lp-btn--secondary:hover {
+    background: var(--lc-color-action-secondary-bg-pressed);
+  }
+}

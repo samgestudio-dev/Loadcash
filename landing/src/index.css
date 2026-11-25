@@ -1,0 +1,93 @@
+/* The repo's versioned tokens (generated from Figma by tools/sync-tokens.py): this page uses only the --lc-* ones. */
+@import '../../tokens/tokens.css';
+
+/* Landing-only values with no lc token, kept in one place.
+   Sizes are not tokens by design; everything else on the page uses lc tokens. */
+:root {
+  --lp-max: 600px; /* one mobile column */
+  --lp-nav-h: 56px; /* Figma App bar height */
+  --lp-on-deep-soft: var(--lc-color-alpha-white-80);
+  --lp-on-deep-line: var(--lc-color-alpha-white-20);
+  /* Figma has no lc effect or paint styles yet, so these three composites live here.
+     The CTA gradient is the lc/Action/Button primary fill (top → bottom); the shadows match legacy Shadow/Default and Shadow/Over. */
+  --lp-gradient-cta: linear-gradient(180deg, var(--lc-color-action-primary-bg-gradient-start) 0%, var(--lc-color-action-primary-bg-gradient-end) 100%);
+  --lp-shadow-default: 0 4px 12px #00012814, 0 0 2px #00012829;
+  --lp-shadow-over: 0 -4px 12px #0001280f, 0 0 2px #0001281f;
+  /* Figma lc/Loan/Loan amount card effects: no lc token for this shadow colour (#034566 at 6 %) */
+  --lp-shadow-card: 0 4px 14px #0345660f;
+  --lp-blur-card: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light only;
+  -webkit-text-size-adjust: 100%;
+  background: var(--lc-color-bg-brand-muted);
+}
+
+body {
+  margin: 0;
+  font-family: var(--lc-typography-font-family-sans);
+  color: var(--lc-color-text-primary);
+  background: var(--lc-color-bg-brand-muted);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--lc-color-border-brand);
+  outline-offset: 2px;
+}
+
+.lp-page {
+  position: relative;
+  max-width: var(--lp-max);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--lc-color-bg-brand-muted);
+  overflow-x: clip;
+}
+
+@media (min-width: 601px) {
+  html,
+  body {
+    background: var(--lc-color-bg-subtle);
+  }
+  .lp-page {
+    box-shadow: var(--lp-shadow-default);
+  }
+}
+
+/* glass card: Figma lc/Loan/Loan amount card and Loan steps card */
+.lp-glass {
+  border: 1px solid var(--lc-color-border-inverse);
+  border-radius: var(--lc-radius-card);
+  background: var(--lc-color-overlay-glass);
+  box-shadow: var(--lp-shadow-card);
+  -webkit-backdrop-filter: blur(var(--lp-blur-card));
+  backdrop-filter: blur(var(--lp-blur-card));
+}
