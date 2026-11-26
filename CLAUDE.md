@@ -71,3 +71,7 @@ tools/landing-server.command  one-click local server for landing/ (port 5174; 51
 - Changing the export or hashing: edit `tools/figma-tokens/core.js` and `tools/tokenlib.py` together, run
   `python3 tools/sync-tokens.py --check`, then do one full export (`lcMcp({}, …)`, all parts).
 - Editing the Figma file itself (values, names, code syntax) is a separate task: make the change in Figma, then sync.
+
+## Checking before you push
+
+- **Index:** decide whether the file index in `AGENTS.md` needs an edit (see "Keep this index current" there); if it does, update it in this commit.
