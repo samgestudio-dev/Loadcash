@@ -39,7 +39,7 @@ landing/                      whitelist landing page (Vite + React), on the --lc
 tools/landing-server.command  one-click local server for landing/ (port 5174; 5173 is MocaMoca's)
 ```
 
-## Landing page (`landing/`)
+## SMS landing page (`landing/`) — whitelist / 白名单落地页 / 导流落地页
 
 - Flow of the MocaMoca whitelist page: hero → loan calculator → About Us → How it works → closing band, sticky CTA.
   The hero is the Figma new-user home screen (8654:17081); the cards are lc components.

@@ -13,7 +13,7 @@ versioned from Figma with a changelog and a git tag per update.
 - **lc first:** new work uses the `--lc-*` tokens (Figma collections `lc-primitives`, `lc-color`, `lc-layout`,
   `lc-typography`). The older collections and styles are kept as `legacy-*` / `legacy/` (since v2026.11.25).
 
-## Landing page
+## SMS landing page (白名单落地页 / 导流落地页)
 
 [`landing/`](landing/) is the LoadCash whitelist landing page (Vite + React), built on the `--lc-*` tokens.
 Run it with [`tools/landing-server.command`](tools/landing-server.command) (double-click; port 5174) or
